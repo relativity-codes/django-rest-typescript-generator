@@ -30,7 +30,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
-include = ["README.rst", "CHANGELOG.rst", "LICENSE"]
+include = ["README.md", "CHANGELOG.md", "LICENSE"]
 
 [tool.poetry.dependencies]
 python = "^3.9.0"
