@@ -124,7 +124,7 @@ def get_digest(typescript_file: Path) -> str:
 
 class TypeScriptBuilder:
     def __init__(self, config: TypeScriptBuilderConfig):
-        self.logger = logging.getLogger("django-rest-tsg")
+        self.logger = logging.getLogger("django-rest-typescript-generator")
         log_level = logging.DEBUG if settings.DEBUG else logging.INFO
         self.logger.setLevel(log_level)
         handler = logging.StreamHandler()
@@ -172,7 +172,7 @@ class TypeScriptBuilder:
 
     def build_header(self, task: TypeScriptBuildTask, hexdigest: str):
         header = HEADER_TEMPLATE.substitute(
-            generator="django-rest-tsg",
+            generator="django-rest-typescript-generator",
             version=VERSION,
             type=".".join((task.type.__module__, task.type.__qualname__)),
             date=datetime.now().isoformat(),
