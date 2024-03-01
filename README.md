@@ -35,7 +35,7 @@ Put a tsgconfig.py file with build tasks into your Django project's root.
 from django.conf import settings
 from django_rest_typescript_generator.build import build
 
-BUILD_DIR = settings.BASE_DIR / "app/src/core"
+BUILD_DIR = settings.BASE_DIR / "statics/types"
 
 BUILD_TASKS = [
     build(Foo),
